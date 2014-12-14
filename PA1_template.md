@@ -143,7 +143,8 @@ AggrData3noNaWD <- aggregate(steps ~ interval+Day, mean, data=noNaWD)
 A dual plot depicting different patterns of step activity during weekends and weekdays:
 
 ```r
-xyplot(AggrData3noNaWD$steps ~ AggrData3noNaWD$interval | AggrData3noNaWD$Day, t= "l", layout=c(1,2), xlab = "Interval", ylab = "Steps")
+xyplot(AggrData3noNaWD$steps ~ AggrData3noNaWD$interval | AggrData3noNaWD$Day,
+       t= "l", layout=c(1,2), xlab = "Interval", ylab = "Steps")
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-13-1.png) 
