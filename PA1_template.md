@@ -13,6 +13,8 @@ data <- read.csv("activity.csv")
 AggrData1 <- aggregate(steps ~ date, sum, data=data)
 AggrData2 <- aggregate(steps ~ interval, mean, data=data)
 ```
+NOTE: aggregate() ignores NAs (it has na.rm=TRUE default) so the the end result here is the same as if aggregation was performed on the dataset that was subjected to na.omit() first.
+
 
 Lastly, lattice package is loaded (package is installed if necessary)
 

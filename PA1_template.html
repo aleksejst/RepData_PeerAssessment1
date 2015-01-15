@@ -62,6 +62,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <pre class="r"><code>data &lt;- read.csv(&quot;activity.csv&quot;)
 AggrData1 &lt;- aggregate(steps ~ date, sum, data=data)
 AggrData2 &lt;- aggregate(steps ~ interval, mean, data=data)</code></pre>
+<p>NOTE: aggregate() ignores NAs (it has na.rm=TRUE default) so the the end result here is the same as if aggregation was performed on the dataset that was subjected to na.omit() first.</p>
 <p>Lastly, lattice package is loaded (package is installed if necessary)</p>
 <pre class="r"><code>if (!&quot;lattice&quot; %in% installed.packages()[,&quot;Package&quot;]) 
     install.packages(&quot;lattice&quot;)
